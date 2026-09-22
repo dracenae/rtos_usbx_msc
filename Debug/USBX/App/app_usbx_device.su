@@ -1,0 +1,6 @@
+../USBX/App/app_usbx_device.c:66:6:MX_USBX_Device_Init	16	static
+../USBX/App/app_usbx_device.c:98:6:MX_USBX_Device_Stack_Init	80	static
+../USBX/App/app_usbx_device.c:220:6:MX_USBX_Device_Stack_DeInit	16	static
+../USBX/App/app_usbx_device.c:257:13:USBD_ChangeFunction	24	static
+../USBX/App/app_usbx_device.c:353:19:write_data_to_flash	96	static
+../USBX/App/app_usbx_device.c:441:6:USBX_APP_Device_Init	8	static

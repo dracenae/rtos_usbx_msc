@@ -1,0 +1,4 @@
+../USBX/App/app_usbx.c:37:6:MX_USBX_Init	3
+../USBX/App/app_usbx.c:75:12:_ux_utility_interrupt_disable	1
+../USBX/App/app_usbx.c:92:6:_ux_utility_interrupt_restore	1
+../USBX/App/app_usbx.c:106:7:_ux_utility_time_get	1
