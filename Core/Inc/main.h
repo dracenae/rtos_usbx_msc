@@ -31,6 +31,9 @@ extern "C" {
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
+#include "app_usbx.h"
+#include "app_filex.h"
+
 
 /* USER CODE END Includes */
 

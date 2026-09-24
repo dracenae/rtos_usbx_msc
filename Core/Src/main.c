@@ -26,7 +26,6 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include "app_usbx.h"
 
 /* USER CODE END Includes */
 
@@ -48,6 +47,7 @@
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
+
 
 /* USER CODE END PV */
 
@@ -101,6 +101,8 @@ int main(void)
   /* USER CODE BEGIN 2 */
 
   MX_USBX_Init();
+
+  MX_FileX_Init();
   /* USER CODE END 2 */
 
   /* Init scheduler */

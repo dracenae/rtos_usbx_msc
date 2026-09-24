@@ -23,6 +23,7 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include <stdbool.h>
+#include "app_freertos.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -267,7 +268,9 @@ static UINT USBD_ChangeFunction(ULONG Device_State)
     case UX_DEVICE_ATTACHED:
 
       /* USER CODE BEGIN UX_DEVICE_ATTACHED */
-
+//
+//    	  osEventFlagsSet(usbEventHandle, USB_CONNECTED_BIT);
+//    	  		  osEventFlagsClear(usbEventHandle, USB_DISCONNECTED_BIT);
       /* USER CODE END UX_DEVICE_ATTACHED */
 
       break;
@@ -275,7 +278,8 @@ static UINT USBD_ChangeFunction(ULONG Device_State)
     case UX_DEVICE_REMOVED:
 
       /* USER CODE BEGIN UX_DEVICE_REMOVED */
-
+//    	 osEventFlagsSet(usbEventHandle, USB_DISCONNECTED_BIT);
+//  		  osEventFlagsClear(usbEventHandle, USB_CONNECTED_BIT);
       /* USER CODE END UX_DEVICE_REMOVED */
 
       break;
@@ -283,7 +287,8 @@ static UINT USBD_ChangeFunction(ULONG Device_State)
     case UX_DCD_STM32_DEVICE_CONNECTED:
 
       /* USER CODE BEGIN UX_DCD_STM32_DEVICE_CONNECTED */
-
+  	  osEventFlagsSet(usbEventHandle, USB_CONNECTED_BIT);
+//  		  osEventFlagsClear(usbEventHandle, USB_DISCONNECTED_BIT);
       /* USER CODE END UX_DCD_STM32_DEVICE_CONNECTED */
 
       break;
@@ -291,7 +296,8 @@ static UINT USBD_ChangeFunction(ULONG Device_State)
     case UX_DCD_STM32_DEVICE_DISCONNECTED:
 
       /* USER CODE BEGIN UX_DCD_STM32_DEVICE_DISCONNECTED */
-
+    	 osEventFlagsSet(usbEventHandle, USB_DISCONNECTED_BIT);
+//    	    		  osEventFlagsClear(usbEventHandle, USB_CONNECTED_BIT);
       /* USER CODE END UX_DCD_STM32_DEVICE_DISCONNECTED */
 
       break;
